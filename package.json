@@ -1,0 +1,16 @@
+{
+  "name": "challenge",
+  "version": "0.0.1",
+  "description": "This package contains a potential solution to the delivery recommendations challenge.",
+  "main": "server/server.js",
+  "scripts": {
+    "lint": "cd server && npm run lint",
+    "install": "cd server && npm install",
+    "test": "cd server && npm test",
+    "coverage": "cd server && npm run coverage",
+    "start": "cd server && npm start"
+  },
+  "author": "bennorwood",
+  "license": "ISC",
+  "dependencies": {}
+}

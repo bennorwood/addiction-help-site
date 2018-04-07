@@ -1,0 +1,61 @@
+{
+  "name": "challenge-server",
+  "version": "0.0.1",
+  "description": "This package contains server components for a potential solution to the delivery recommendations challenge.",
+  "main": "server.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "nyc mocha --timeout 8000 --exit",
+    "start": "node server.js --mode production",
+    "start-dev": "node server.js"
+  },
+  "keywords": [
+    "challenge"
+  ],
+  "author": "bennorwood",
+  "license": "ISC",
+  "dependencies": {
+    "@godaddy/terminus": "^2.2.0",
+    "@google/maps": "^0.4.5",
+    "body-parser": "^1.18.2",
+    "chalk": "^2.3.0",
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "helmet": "^3.10.0",
+    "mongoose": "^5.0.1",
+    "morgan": "^1.8.1",
+    "nconf": "^0.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "expect.js": "^0.3.1",
+    "mocha": "^5.0.0",
+    "nyc": "^11.4.1",
+    "supertest": "^3.0.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 40,
+    "statements": 40,
+    "functions": 39,
+    "branches": 17,
+    "include": [
+      "**/*.js"
+    ],
+    "exclude": [
+      "reports/**"
+    ],
+    "reporter": [
+      "lcov",
+      "html"
+    ],
+    "cache": true,
+    "all": true,
+    "report-dir": "./.reports"
+  }
+}
