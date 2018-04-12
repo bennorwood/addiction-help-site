@@ -1,5 +1,2 @@
 **/node_modules/
-server/foundation/config/custom.config.json
-server/.nyc_output/
-server/.reports/
 **/npm-debug.log
