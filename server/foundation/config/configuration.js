@@ -9,7 +9,7 @@
             port: 7000,
             mode: 'development',
             staticDirs: [
-                path.resolve(__dirname, '..', '..', '..', 'ui', 'public')
+                path.resolve(__dirname, '..', '..', '..', 'ui', 'dist')
             ],
             logging: {
                 /**
@@ -64,7 +64,7 @@
                  * Using Mongoose: http://mongoosejs.com/docs/guide.html
                  */
                 'mongodb-api-wrapper':{
-                    enabled: true,
+                    enabled: false,
                     path: 'mongodb-api-wrapper/mongodb-api-wrapper',
                     opts: {
                         mongo: {
@@ -90,7 +90,7 @@
                     }
                 },
                 'google-maps-api-client': {
-                    enabled: true,
+                    enabled: false,
                     path: 'google-maps-api-client/google.maps.api.client',
                     opts: {
                         //this property will be used to with requests to the google maps distance matrix service
