@@ -9,7 +9,7 @@
             port: 7000,
             mode: 'development',
             staticDirs: [
-                path.resolve(__dirname, '..', '..', '..', 'public')
+                path.resolve(__dirname, '..', '..', '..', 'ui', 'public')
             ],
             logging: {
                 /**
