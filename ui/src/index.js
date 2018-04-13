@@ -1,4 +1,4 @@
 (function() {
-    require('bootstrap/dist/css/bootstrap.min.css');
+    require('./styles/index.scss');
     require('./app/app.js');
 })();
