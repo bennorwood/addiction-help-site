@@ -14,7 +14,7 @@ div.app-root
                 div#app-nav-links.collapse.navbar-collapse
                     ul.nav.navbar-nav
                         li.active(ng-repeat="stateConfig in RootController.states")
-                            a(ui-sref="stateConfig.state" ng-bind="stateConfig.label")
+                            a(ui-sref="{{::stateConfig.state}}" ng-bind="stateConfig.label")
                                 span.sr-only(ng-bind="stateConfig.label")
     div.app-container.container-fluid
         div.row(ui-view)
