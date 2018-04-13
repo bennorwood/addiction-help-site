@@ -2,7 +2,11 @@
     module.exports = function(app, angular){
         return function(){
             this.states = [
+<<<<<<< HEAD
+                {state: 'root.test', label: 'Test'}
+=======
                 {state: 'root.meetings', label: 'Meetings'}
+>>>>>>> origin/master
             ];
         };
     };
