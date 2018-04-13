@@ -24,7 +24,7 @@
     app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
         $stateProvider.state({
-            name: 'home',
+            name: 'root.home',
             url: '/home',
             controller: function(){},
             controllerAs: 'DashboardStateController',

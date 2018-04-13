@@ -1,8 +1,9 @@
 (function(){
-
-    'use strict';
-
-    module.exports = function(app, angular) {
-
+    module.exports = function(app, angular){
+        return function(){
+            this.states = [
+                {state: 'root.test', label: 'Test'}
+            ];
+        };
     };
 })();

@@ -1,1 +1,21 @@
-
+div.app-root
+    div.app-header
+        nav.navbar.navbar-default
+            div.container-fluid
+                //- Brand and toggle get grouped for better mobile display
+                div.navbar-header
+                button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#app-nav-links" aria-expanded="false")
+                    span.sr-only(ng-bind="'Toggle navigation'")
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href="#" ng-bind="'Brand'")
+                //- Collect the nav links, forms, and other content for toggling
+                div#app-nav-links.collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li.active(ng-repeat="stateConfig in RootController.states")
+                            a(ui-sref="stateConfig.state" ng-bind="stateConfig.label")
+                                span.sr-only(ng-bind="stateConfig.label")
+    div.app-container.container-fluid
+        div.row(ui-view)
+    div.app-footer
