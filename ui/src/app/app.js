@@ -23,8 +23,8 @@
     };
 
     // import all the states
-    importAll(require.context('../states', true, /\.state\..*\.js$/));
+    importAll(require.context('../states', true, /\.state\.config\.js$/));
 
     // import all the directives
-    importAll(require.context('../directives', true, /\.directive\..*\.js$/));
+    importAll(require.context('../directives', true, /\.directive\.js$/));
 })();
