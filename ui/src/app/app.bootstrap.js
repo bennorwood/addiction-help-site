@@ -1,7 +1,7 @@
 (function(document) {
     'use strict';
 
-    var jQuery = require('jQuery');
+    var jQuery = require('jquery');
     var angular = require('angular');
     var strModuleName = 'ngBootstrapConfig';
 
