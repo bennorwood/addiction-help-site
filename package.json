@@ -5,7 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "lint": "cd server && npm run lint",
-    "install": "cd server && npm install && cd ../ui && npm install",
+    "install": "cd server && npm install && cd ../ui && npm install && npm run build",
     "test": "cd server && npm test",
     "coverage": "cd server && npm run coverage",
     "start": "cd server && npm start",

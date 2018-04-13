@@ -3,7 +3,6 @@ node_js:
   - '7'
 install:
   - npm install
-  - npm build
 script:
   - npm run lint
   - npm test
