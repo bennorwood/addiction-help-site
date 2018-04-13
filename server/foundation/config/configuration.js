@@ -5,7 +5,7 @@
      */
     module.exports = function(){
         return {
-            appName: 'addiction-challenge',
+            appName: 'joie-de-vivre',
             port: 7000,
             mode: 'development',
             staticDirs: [
