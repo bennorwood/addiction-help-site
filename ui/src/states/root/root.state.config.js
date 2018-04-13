@@ -8,11 +8,10 @@
 
             $stateProvider.state({
                 abstract: true,
-                name: 'app',
+                name: 'root',
                 controller: require('./root.controller.js')(app, angular),
-                controllerAs: 'RootStateController',
-                template: require('./root.pug')(),
-                resolve: {}
+                controllerAs: 'RootController',
+                template: require('./root.pug')()
             });
 
             $urlRouterProvider.otherwise('home');
