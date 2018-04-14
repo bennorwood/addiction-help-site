@@ -9,11 +9,9 @@
      */
     module.exports = {
         initialize: function(opts){
-
-            const response = require('./' + opts.spoof);
-
+            
             router.get('/', (req, res) => {
-                res.send(response);
+                res.send(require('./' + opts.spoof));
             });
 
             return router;
