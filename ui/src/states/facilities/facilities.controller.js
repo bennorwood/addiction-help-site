@@ -47,6 +47,7 @@
             var initialize = function(){
                 return MapService.NgMap.getMap().then(function(_map){
                     map = _map;
+                    createMarkersForPage();
                 });
             };
             
