@@ -3980,6 +3980,11 @@
       "resolved": "https://registry.npmjs.org/neo-async/-/neo-async-2.5.1.tgz",
       "integrity": "sha512-3KL3fvuRkZ7s4IFOMfztb7zJp3QaVWnBeGoJlgB38XnCRPj/0tLzzLG5IB8NYOHbJ8g8UGrgZv44GLDk6CxTxA=="
     },
+    "ngmap": {
+      "version": "1.18.4",
+      "resolved": "https://registry.npmjs.org/ngmap/-/ngmap-1.18.4.tgz",
+      "integrity": "sha1-jzbY6EDaaCnOXUDl10e3DEo6yDM="
+    },
     "no-case": {
       "version": "2.3.2",
       "resolved": "https://registry.npmjs.org/no-case/-/no-case-2.3.2.tgz",

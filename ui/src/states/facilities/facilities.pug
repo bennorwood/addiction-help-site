@@ -1,9 +1,48 @@
 div.container.no-padding.card.white-background.padding-2-em.shadow
     div.header.col-xs-12.card
-        span.h1 Find Services
+        span.h1(ng-bind="'Find Services'") 
     div.content
-        div.col-md-8.map-container-section
-            div Map section
-        div.col-md-4.list-container
-            div list
-            
+        div.col-xs-12.map-container-section.map-container.margin-bottom-2em
+            include map.pug
+        div.col-xs-12.list-container
+            div.h3.margin-bottom-1em(ng-bind="'Facility Details'")
+            div.nav-tools.margin-bottom-1em
+                div.col-xs-3.no-padding
+                    a.btn.btn-default(ng-bind="'< Prev'"
+                                      ng-disabled="FacilitiesController.isPreviousDisabled()"
+                                      ng-click="FacilitiesController.prevPage()") 
+                div.col-xs-6.pagination-info.text-center
+                    span(ng-bind="'Page: '+ FacilitiesController.cachingContainer.controllerSettings.currentPage")
+                    span(ng-bind="' of '+ FacilitiesController.calculateLastPage()")
+                div.col-xs-3
+                    a.btn.btn-primary(ng-bind="'Next >'"
+                                      ng-disabled="FacilitiesController.isNextDisabled()"
+                                      ng-click="FacilitiesController.nextPage()")
+                div.clearfix.no-padding
+            table.table.table-bordered.table-hover.table-striped.fit-to-container
+                thead
+                    tr
+                        th #
+                        th(ng-bind="'Facility Listing Information'")
+                tbody
+                    tr(ng-repeat="facility in FacilitiesController.facilities | limitTo: FacilitiesController.pageLimit : FacilitiesController.calculateOffset()")
+                        th(ng-bind="$index + 1 + FacilitiesController.calculateOffset() ")
+                        td
+                            div.title.col-xs-9.margin-bottom-quarter-em
+                                strong(ng-bind="facility.name1")
+                            div.address.col-xs-9
+                                span(ng-bind="facility.street1")
+                            div.location.col-xs-9
+                                span(ng-bind="facility.city+ ', '")
+                                span(ng-bind="facility.state + ' '")
+                                span(ng-bind="facility.zip")
+                            div.main-telephone.col-xs-9
+                                span(ng-bind="'Main Phone: '")
+                                a(href="{{::'tel:' + facility.phone}}" ng-bind="facility.phone")
+                            div.intake.col-xs-9.margin-bottom-quarter-em(ng-if="facility.intake1")
+                                span(ng-bind="'Intake: '")
+                                a(href="{{::'tel:' + facility.phone}}" ng-bind="facility.phone")
+                            div.website.col-xs-9(ng-if="facility.website.length > 10")
+                                a(href="{{facility.website}}")
+                                    em(ng-bind="'Visit Site'")
+                    

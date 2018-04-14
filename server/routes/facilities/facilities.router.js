@@ -16,7 +16,10 @@
                 var options = {
                     uri: 'http://hhs-opioid-codeathon.data.socrata.com/resource/fw4h-unyc.json',
                     qs: {
-                        city: 'Lafayette'  // -> uri + '?city=Lafayette'
+                        //city: 'Lafayette'  // -> uri + '?city=Lafayette'
+                        $where: "state like 'LA'",
+                        $select: 'street1,name1,city,state,zip,phone,website,longitude,latitude',
+                        $group: 'street1,name1,city,state,zip,phone,website,longitude,latitude'
                     },
                     headers: {
                         'User-Agent': 'Request-Promise'
