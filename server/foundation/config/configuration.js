@@ -43,6 +43,13 @@
                         facilitiesApi: 'http://hhs-opioid-codeathon.data.socrata.com/resource/fw4h-unyc.json'
                     }
                 },
+                '/prescriptions': {
+                    enabled: true,
+                    router: 'prescriptions/prescriptions.router.js',
+                    opts: {
+                        prescriptionsApi: 'https://hhs-opioid-codeathon.data.socrata.com/resource/vcp5-amce.json?'
+                    }
+                },
                 '/server-config': {
                     enabled: true,
                     router: 'server-config/server.config.router',
