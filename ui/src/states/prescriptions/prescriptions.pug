@@ -1,0 +1,25 @@
+div.container
+    div.row
+        div.col-lg-12.col-md-12.col-sm-12.col-xs-12(style="margin-top: 20px;")
+            table.table.table-bordered.table-striped.table-hover(border="1")
+                thead
+                    tr
+                        td(colspan="8").text-center Prescribing Doctors
+                tr
+                    th.text-center NPI
+                    th.text-center NPPES_Provider_last
+                    th.text-center State
+                    th.text-center Zip
+                    th.text-center Opoid Claim Count
+                    th.text-center Opoid Prescribing %
+                    th.text-center Specialty
+                    th.text-center Total Claim Count
+                tr(ng-repeat="prescription in PrescriptionsController.prescriptions")
+                    td.text-center {{prescription.npi}}
+                    td.text-center {{prescription.nppes_provider_last}}
+                    td.text-center {{prescription.nppes_provider_state}}
+                    td.text-center {{prescription.nppes_provider_zip}}
+                    td.text-center {{prescription.opioid_claim_count}}
+                    td.text-center {{prescription.opioid_prescribing}}
+                    td.text-center {{prescription.specialty}}
+                    td.text-center {{prescription.total_claim_count}}
