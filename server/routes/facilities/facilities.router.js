@@ -9,7 +9,7 @@
      * This router, is just a hello world test.
      */
     module.exports = {
-        initialize: function(opts){
+        initialize: function(){
 
             router.get('/', (req, res) => {
 
@@ -29,7 +29,7 @@
                         res.send(response);
                     })
                     .catch(function (err) {
-                        // API call failed...
+                        console.log(err);
                     });
             });
 
