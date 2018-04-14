@@ -2,6 +2,30 @@
     margin: 0;
 }
 
+.margin-bottom-quarter-em {
+    margin-bottom: .25em;
+}
+
+.margin-right-half-em {
+    margin-right: 0.5em;
+}
+
+.margin-bottom-1em {
+    margin-bottom: 1em;
+}
+
+.margin-bottom-2em {
+    margin-bottom: 2em;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.padding-2-em {
+    padding: 2em;
+}
+
 .fix-position {
     position: fixed;
 }
@@ -15,6 +39,14 @@
     background-color: $primary;
 }
 
+.white-background {
+    background-color: #FFF;
+}
+
 .no-border-radius {
     border-radius: 0;
+}
+
+.fit-to-container {
+    width: 100%;
 }

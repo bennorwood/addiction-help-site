@@ -36,6 +36,20 @@
              * Routers are initialized in express-init.js ~L-59
              */
             routers: {
+                '/facilities': {
+                    enabled: true,
+                    router: 'facilities/facilities.router.js',
+                    opts: {
+                        facilitiesApi: 'http://hhs-opioid-codeathon.data.socrata.com/resource/fw4h-unyc.json'
+                    }
+                },
+                '/prescriptions': {
+                    enabled: true,
+                    router: 'prescriptions/prescriptions.router.js',
+                    opts: {
+                        prescriptionsApi: 'https://hhs-opioid-codeathon.data.socrata.com/resource/vcp5-amce.json?'
+                    }
+                },
                 '/server-config': {
                     enabled: true,
                     router: 'server-config/server.config.router',

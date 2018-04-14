@@ -1,72 +1,48 @@
-div.container(style="margin-top: 20px;")
-    h3.text-center Enter your zip code to find the nearest treatment facilities.
-    hr
-    form(action="/" method="GET")
-        div.form-group.text-center
-            label(for="zip") Zip Code
-            input(type="text" pattern="[0-9]{5}" placeholder="00000" title="Five digit zip code")
-            input(type="submit", value="Submit")
-            br
-            br
-            p or
-            br
-            button(type="button") Use My Location
-    hr
-    hr
-    div.row
-        div.col-lg-4.col-md-4.col-sm-4.col-xs-12
-            h4 
-                a(href="#col1Content" data-toggle="collapse") Victory Addiction Recovery Center - Louisiana
-            div(id="col1Content" class="collapse")
-                h5 Services Offered
-                ul
-                    li Inpatient Treatment
-                    li Outpatient Treatment
-                    li AA Meetings
-                    li Family Care Support Group
-                h5 Insurances Accepted
-                ul
-                    li GILSBAR
-                    li Blue Cross Blue Shield
-                    li Cigna
-                    li Life Synch
-                    li PHCS
-                    li United Behavioral Health
-                    li Value Options
-                    li Verity Health Net
-                h5
-                    a(href="https://myvictorycenter.com") Website
-        div.col-lg-4.col-md-4.col-sm-4.col-xs-12
-            h4 
-                a(href="#col2Content" data-toggle="collapse") Compass Health Care - Louisiana
-            div(id="col2Content" class="collapse")
-                h5 Services Offered
-                ul
-                    li Inpatient Treatment
-                        ul
-                            li Lafayette
-                    li Outpatient Treatment
-                        ul
-                            li Compass Behavioral of Lafayette
-                            li Bridgeway of Acadia St. Landry Hospital - Church Point
-                            li Outpatient Behavioral Center of Opelousas
-
-                h5 Insurances Accepted
-                ul
-                    li Call 1-800-640-5433 for information
-                h5 
-                    a(href="www.compasshealthcare.com") Website
-        div.col-lg-4.col-md-4.col-sm-4.col-xs-12
-            h4 
-                a(href="#col3Content" data-toggle="collapse") Townsend Recovery Center - Louisiana
-            div(id="col3Content" class="collapse")
-                h5 Services Offered
-                ul
-                    li In-patient/Residential – New Orleans
-                    ii Out Patient – various locations
-
-                h5 Insurances Accepted
-                ul
-                    li Call 1-800-760-8561 for information
-                h5 
-                    a(href="https://townsendla.com") Website
+div.container.no-padding.card.white-background.padding-2-em.shadow
+    div.header.col-xs-12.card
+        span.h1(ng-bind="'Find Services'") 
+    div.content
+        div.col-xs-12.map-container-section.map-container.margin-bottom-2em
+            include map.pug
+        div.col-xs-12.list-container
+            div.h3.margin-bottom-1em(ng-bind="'Facility Details'")
+            div.nav-tools.margin-bottom-1em
+                div.col-xs-3.no-padding
+                    a.btn.btn-default(ng-bind="'< Prev'"
+                                      ng-disabled="FacilitiesController.isPreviousDisabled()"
+                                      ng-click="FacilitiesController.prevPage()") 
+                div.col-xs-6.pagination-info.text-center
+                    span(ng-bind="'Page: '+ FacilitiesController.cachingContainer.controllerSettings.currentPage")
+                    span(ng-bind="' of '+ FacilitiesController.calculateLastPage()")
+                div.col-xs-3
+                    a.btn.btn-primary(ng-bind="'Next >'"
+                                      ng-disabled="FacilitiesController.isNextDisabled()"
+                                      ng-click="FacilitiesController.nextPage()")
+                div.clearfix.no-padding
+            table.table.table-bordered.table-hover.table-striped.fit-to-container
+                thead
+                    tr
+                        th #
+                        th(ng-bind="'Facility Listing Information'")
+                tbody
+                    tr(ng-repeat="facility in FacilitiesController.facilities | limitTo: FacilitiesController.pageLimit : FacilitiesController.calculateOffset()")
+                        th(ng-bind="$index + 1 + FacilitiesController.calculateOffset() ")
+                        td
+                            div.title.col-xs-9.margin-bottom-quarter-em
+                                strong(ng-bind="facility.name1")
+                            div.address.col-xs-9
+                                span(ng-bind="facility.street1")
+                            div.location.col-xs-9
+                                span(ng-bind="facility.city+ ', '")
+                                span(ng-bind="facility.state + ' '")
+                                span(ng-bind="facility.zip")
+                            div.main-telephone.col-xs-9
+                                span(ng-bind="'Main Phone: '")
+                                a(href="{{::'tel:' + facility.phone}}" ng-bind="facility.phone")
+                            div.intake.col-xs-9.margin-bottom-quarter-em(ng-if="facility.intake1")
+                                span(ng-bind="'Intake: '")
+                                a(href="{{::'tel:' + facility.phone}}" ng-bind="facility.phone")
+                            div.website.col-xs-9(ng-if="facility.website.length > 10")
+                                a(href="{{facility.website}}")
+                                    em(ng-bind="'Visit Site'")
+                    

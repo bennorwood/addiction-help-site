@@ -9,6 +9,8 @@
     var app = angular.module(strAppName, [
         require('angular-ui-router'),
         require('angular-ui-bootstrap'),
+        require('ngmap'),
+        require('angular-ui-bootstrap'),
         require('./app.bootstrap.js')(strAppName)
     ]);
 
