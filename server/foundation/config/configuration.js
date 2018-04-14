@@ -57,6 +57,13 @@
                             }
                         }
                     }
+                },
+                '/meetings': {
+                    enabled: true,
+                    router: 'meetings/meetings.router',
+                    opts: {
+                        spoof: 'meetings.data.json'
+                    }
                 }
             },
             services: {

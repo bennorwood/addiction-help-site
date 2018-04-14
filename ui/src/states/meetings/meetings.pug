@@ -1,2 +1,3 @@
-uib-accordion
-    meeting-group(data-meeting="{heading: 'Test'}")
+div.container
+    uib-accordion
+        meeting-group(data-ng-repeat="(meetingName, meeting) in MeetingsController.meetings" data-meeting="meeting")

@@ -3,8 +3,8 @@
     'use strict';
 
     module.exports = function(app, angular) {
-        return function() {
-            
-        };
+        return ['meetings', function(meetings) {
+            this.meetings = meetings.data;
+        }];
     };
 })();
