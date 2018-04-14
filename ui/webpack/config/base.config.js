@@ -3,18 +3,19 @@
 
     const HtmlWebpackPlugin = require('html-webpack-plugin');
     const CleanWebpackPlugin = require('clean-webpack-plugin');
+    const CopyWebpackPlugin = require('copy-webpack-plugin');
     const webpack = require('webpack');
     const path = require('path');
     const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
     // Create multiple instances
-    const extractCSS = new ExtractTextPlugin('stylesheets/[name].css');
-    const extractSASS = new ExtractTextPlugin('stylesheets/[name].sass.css');
-
-    // Create multiple instances
     const MODULE_ROOT = process.cwd();
     const DIST_DIR = 'dist';
-
+    
+    // Create multiple instances
+    const extractCSS  = new ExtractTextPlugin('stylesheets/[name].css');
+    const extractSASS = new ExtractTextPlugin('stylesheets/[name].sass.css');
+    
     module.exports = {
         entry: {
             index: './src/index.js'
@@ -89,7 +90,11 @@
             new HtmlWebpackPlugin({
                 template: './src/index.pug',
                 inject: 'head'
-            })
+            }),
+            new CopyWebpackPlugin([
+                                    { from: 'src/videos/Valentines.mp4', to: 'videos/' },
+                                    { from: 'src/videos/Valentines.webm', to: 'videos/' }
+                                  ], {debug: true})
         ]
     };
 })();

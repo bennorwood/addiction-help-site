@@ -1,3 +1,9 @@
+@import "palette";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "~angular-ui-bootstrap/dist/ui-bootstrap-csp.css";
+@import "mixins";
+@import "styles";
+@import "coverr-styles";
+@import "helper-classes";
+
