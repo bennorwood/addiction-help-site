@@ -2,10 +2,10 @@
     'use strict';
     module.exports = function(app, angular) {
         var jQuery = require('jquery');
-        
+
         return function() {
             this.coverVideoUrl = 'videos/Valentines';
-            
+
             this.initialize = function(){
                 scaleVideoContainer();
 
@@ -13,7 +13,7 @@
                 initBannerVideoSize('.video-container .filter');
                 initBannerVideoSize('.video-container video');
             };
-            
+
             function scaleVideoContainer() {
 
                 var height = jQuery(window).height() + 5;
@@ -32,7 +32,7 @@
                 scaleBannerVideoSize(element);
 
             }
-            
+
             function scaleBannerVideoSize(element){
 
                 var windowWidth = jQuery(window).width(),
@@ -60,7 +60,7 @@
                 });
             }
 
-            
+
             this.initialize();
         };
     };
