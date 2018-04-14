@@ -1,0 +1,20 @@
+.no-margin {
+    margin: 0;
+}
+
+.fix-position {
+    position: fixed;
+}
+
+.header-styles {
+    z-index: 1000;
+    width:100%;
+}
+
+.primary-background {
+    background-color: $primary;
+}
+
+.no-border-radius {
+    border-radius: 0;
+}
