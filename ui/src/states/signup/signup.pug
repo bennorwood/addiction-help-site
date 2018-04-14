@@ -1,0 +1,24 @@
+div.container
+    div.row
+        div.col-lg-12.col-md-12.col-sm-12.col-xs-12
+            div.form-group.text-center
+                form(action="/" method="GET")
+                    label(for="firstName") First Name:
+                    input(type="text" name="firstName" pattern="^[A-z]+$" placeholder="John" required)
+                    br
+                    label(for="lastName") Last Name:
+                    input(type="text" name="lastName" pattern="^[A-z]+$" placeholder="Doe" required)
+                    br
+                    label(for="age") Age:
+                    input(type="text", name="age" pattern="^(\\d{2}|\\d{3})$" required)
+                    br
+                    label(for="daysClean") Days Clean:
+                    input(type="text", name="daysClean" required)
+                    br
+                    label(for="dailyCost") Daily Drug Cost:
+                    input(type="text" name="dailyCost" required)
+                    br
+                    label(for="location") Location:
+                    input(type="text" name="location" required)
+                    br
+                    input(type="submit" value="Register")
