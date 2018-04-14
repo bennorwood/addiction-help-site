@@ -1,6 +1,6 @@
-.container
+div.container
     form(action="/" method="GET")
-        .form-group.text-center
+        div.form-group.text-center
             label(for="zip") Zip Code
             input(type="text" pattern="[0-9]{5}" placeholder="00000" title="Five digit zip code")
             input(type="submit", value="Submit")
@@ -11,11 +11,11 @@
             button(type="button") Use My Location
     hr
     hr
-    .row
-        .col-lg-4.col-md-4.col-sm-4.col-xs-12
+    div.row
+        div.col-lg-4.col-md-4.col-sm-4.col-xs-12
             h4 
                 a(href="#col1Content" data-toggle="collapse") Victory Addiction Recovery Center - Louisiana
-            #col1Content.collapse
+            div(id="col1Content" class="collapse")
                 h5 Services Offered
                 ul
                     li Inpatient Treatment
@@ -34,10 +34,10 @@
                     li Verity Health Net
                 h5
                     a(href="https://myvictorycenter.com") Website
-        .col-lg-4.col-md-4.col-sm-4.col-xs-12
+        div.col-lg-4.col-md-4.col-sm-4.col-xs-12
             h4 
                 a(href="#col2Content" data-toggle="collapse") Compass Health Care - Louisiana
-            #col2Content.collapse
+            div(id="col2Content" class="collapse")
                 h5 Services Offered
                 ul
                     li Inpatient Treatment
@@ -54,10 +54,10 @@
                     li Call 1-800-640-5433 for information
                 h5 
                     a(href="www.compasshealthcare.com") Website
-        .col-lg-4.col-md-4.col-sm-4.col-xs-12
+        div.col-lg-4.col-md-4.col-sm-4.col-xs-12
             h4 
                 a(href="#col3Content" data-toggle="collapse") Townsend Recovery Center - Louisiana
-            #col3Content.collapse
+            div(id="col3Content" class="collapse")
                 h5 Services Offered
                 ul
                     li In-patient/Residential – New Orleans
