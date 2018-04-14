@@ -9,7 +9,7 @@
             $stateProvider.state({
                 name: 'root.home',
                 url: '/home',
-                controller: function(){},
+                controller: require('./home.controller.js')(app, angular),
                 controllerAs: 'HomeController',
                 template: require('./home.pug')()
             });
