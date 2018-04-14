@@ -1,0 +1,7 @@
+.app-navbar {
+    @include box-shadow(0, 5px, 5px, rgba(0, 0, 0, 0.5));
+}
+
+.header-padding {
+    padding-top: 50px;
+}

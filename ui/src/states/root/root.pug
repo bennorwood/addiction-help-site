@@ -1,6 +1,6 @@
 div.app-root
-    div.app-header
-        nav.navbar.navbar-default
+    div.app-header.fix-position.header-styles
+        nav.navbar.navbar-default.no-margin.navbar-inverse.app-navbar.no-border-radius
             div.container-fluid
                 //- Brand and toggle get grouped for better mobile display
                 div.navbar-header
@@ -16,6 +16,6 @@ div.app-root
                         li.active(ng-repeat="stateConfig in RootController.states")
                             a(ui-sref="{{::stateConfig.state}}" ng-bind="stateConfig.label")
                                 span.sr-only(ng-bind="stateConfig.label")
-    div.app-container.container-fluid
+    div.header-padding.app-container.container-fluid
         div.row(ui-view)
     div.app-footer
