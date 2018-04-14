@@ -1,24 +1,45 @@
-div.container
+div.container(style="margin-top: 20px;")
     div.row
+        div.col-lg-6.col-md-6.col-sm-6.col-xs-12(style="margin-top: 130px;")
+            h3 Pick the date you have since been clean.
+        div.col-lg-6.col-md-6.col-sm-6.col-xs-12
+            div
+                pre Selected date is: 
+                    em {{dt | date:'fullDate' }}
+                div(style="display:inline-block; min-height:290px;")
+                    div.well.well-sm(uib-datepicker ng-model="dt" datepicker-options="options")
+                hr
+                button.btn.btn-sm.btn-info(type="button" ng-click="today()") Today
+                button.btn.btn-sm.btn-default(type="button" ng-click="setDate(2009, 7, 24)") 2009-08-24
+                button.btn.btn-sm.btn-danger(type="button" ng-click="clear()") Clear
+                button.btn.btn-sm.btn-default(type="button" ng-click="toggleMin()" uib-tooltip="After today restriction") Min date
         div.col-lg-12.col-md-12.col-sm-12.col-xs-12
-            div.form-group.text-center
-                form(action="/" method="GET")
+
+            hr
+            hr
+            hr
+
+        
+            form(action="/" method="GET")
+                
+                div.form-group(style="border: 2px solid green;")
+
                     label(for="firstName") First Name:
-                    input(type="text" name="firstName" pattern="^[A-z]+$" placeholder="John" required)
+                    input.form-control(type="text" name="firstName" pattern="^[A-z]+$" placeholder="John" required)
                     br
                     label(for="lastName") Last Name:
-                    input(type="text" name="lastName" pattern="^[A-z]+$" placeholder="Doe" required)
+                    input.form-control(type="text" name="lastName" pattern="^[A-z]+$" placeholder="Doe" required)
                     br
                     label(for="age") Age:
-                    input(type="text", name="age" pattern="^(\\d{2}|\\d{3})$" required)
+                    input.form-control(type="text", name="age" pattern="^(\\d{2}|\\d{3})$" required)
                     br
                     label(for="daysClean") Days Clean:
-                    input(type="text", name="daysClean" required)
+                    input.form-control(type="text", name="daysClean" required)
                     br
                     label(for="dailyCost") Daily Drug Cost:
-                    input(type="text" name="dailyCost" required)
+                    input.form-control(type="text" name="dailyCost" required)
                     br
                     label(for="location") Location:
-                    input(type="text" name="location" required)
+                    input.form-control(type="text" name="location" required)
                     br
-                    input(type="submit" value="Register")
+                    input.form-control(type="submit" value="Register")

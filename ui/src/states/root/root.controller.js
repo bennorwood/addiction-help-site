@@ -4,6 +4,7 @@
             this.states = [
                 {state: 'root.info', label: 'Info'},
                 {state: 'root.facilities', label: 'Facilities'},
+                {state: 'root.prescriptions', label: 'Prescriptions'},
                 {state: 'root.meetings', label: 'Meetings'},
                 {state: 'root.about', label: 'About'},
                 {state: 'root.signup', label: 'Sign Up'},
