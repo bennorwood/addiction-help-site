@@ -3,6 +3,7 @@
         app.directive('meetingGroup', function() {
             return {
                 restrict: 'E',
+                replace: true,
                 bindToController: {
                     meeting: '='
                 },

@@ -1,0 +1,22 @@
+{
+    "Step by Step-c": {
+        "name": "Step by Step-c",
+        "date": "",
+        "time": {
+            "start": "",
+            "end": ""
+        },
+        "location": {
+            "street": "",
+            "county": "",
+            "state": "",
+            "zip": ""
+        },
+        "details": {
+            "type": "",
+            "format": "",
+            "instructions": "",
+            "additional": ""
+        }
+    }
+}
