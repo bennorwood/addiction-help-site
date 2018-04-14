@@ -2,6 +2,22 @@
     @include box-shadow(0, 5px, 5px, rgba(0, 0, 0, 0.5));
 }
 
+.shadow {
+    @include box-shadow(0, 5px, 5px, rgba(0, 0, 0, 0.5));
+}
+
 .header-padding {
-    padding-top: 50px;
+    padding-top: 75px;
+}
+
+.negative-header-25px-margin {
+    margin-top: -25px;
+}
+
+video.cover-video{
+    width: 100%
+}
+
+.body-background {
+    background-color: $secondary
 }

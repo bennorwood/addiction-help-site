@@ -2,6 +2,14 @@
     margin: 0;
 }
 
+.no-padding {
+    padding: 0;
+}
+
+.padding-2-em {
+    padding: 2em;
+}
+
 .fix-position {
     position: fixed;
 }
@@ -13,6 +21,10 @@
 
 .primary-background {
     background-color: $primary;
+}
+
+.white-background {
+    background-color: #FFF;
 }
 
 .no-border-radius {
