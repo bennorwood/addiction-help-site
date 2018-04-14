@@ -1,0 +1,70 @@
+.container
+    form(action="/" method="GET")
+        .form-group.text-center
+            label(for="zip") Zip Code
+            input(type="text" pattern="[0-9]{5}" placeholder="00000" title="Five digit zip code")
+            input(type="submit", value="Submit")
+            br
+            br
+            p or
+            br
+            button(type="button") Use My Location
+    hr
+    hr
+    .row
+        .col-lg-4.col-md-4.col-sm-4.col-xs-12
+            h4 
+                a(href="#col1Content" data-toggle="collapse") Victory Addiction Recovery Center - Louisiana
+            #col1Content.collapse
+                h5 Services Offered
+                ul
+                    li Inpatient Treatment
+                    li Outpatient Treatment
+                    li AA Meetings
+                    li Family Care Support Group
+                h5 Insurances Accepted
+                ul
+                    li GILSBAR
+                    li Blue Cross Blue Shield
+                    li Cigna
+                    li Life Synch
+                    li PHCS
+                    li United Behavioral Health
+                    li Value Options
+                    li Verity Health Net
+                h5
+                    a(href="https://myvictorycenter.com") Website
+        .col-lg-4.col-md-4.col-sm-4.col-xs-12
+            h4 
+                a(href="#col2Content" data-toggle="collapse") Compass Health Care - Louisiana
+            #col2Content.collapse
+                h5 Services Offered
+                ul
+                    li Inpatient Treatment
+                        ul
+                            li Lafayette
+                    li Outpatient Treatment
+                        ul
+                            li Compass Behavioral of Lafayette
+                            li Bridgeway of Acadia St. Landry Hospital - Church Point
+                            li Outpatient Behavioral Center of Opelousas
+
+                h5 Insurances Accepted
+                ul
+                    li Call 1-800-640-5433 for information
+                h5 
+                    a(href="www.compasshealthcare.com") Website
+        .col-lg-4.col-md-4.col-sm-4.col-xs-12
+            h4 
+                a(href="#col3Content" data-toggle="collapse") Townsend Recovery Center - Louisiana
+            #col3Content.collapse
+                h5 Services Offered
+                ul
+                    li In-patient/Residential – New Orleans
+                    ii Out Patient – various locations
+
+                h5 Insurances Accepted
+                ul
+                    li Call 1-800-760-8561 for information
+                h5 
+                    a(href="https://townsendla.com") Website
