@@ -16,6 +16,6 @@ div.app-root
                         li.active(ng-repeat="stateConfig in RootController.states")
                             a(ui-sref="{{::stateConfig.state}}" ng-bind="stateConfig.label")
                                 span.sr-only(ng-bind="stateConfig.label")
-    div.header-padding.app-container.container
+    div.header-padding.app-container.container-fluid
         div.row(ui-view)
     div.app-footer
