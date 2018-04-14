@@ -3,6 +3,10 @@
     'use strict';
 
     module.exports = function(app, angular) {
+        
+        require('./facilities.service.js')(app, angular);
+        require('./map.service.js')(app, angular);
+        
         //module config
         app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
@@ -12,7 +16,11 @@
                 controller: require('./facilities.controller.js')(app, angular),
                 controllerAs: 'FacilitiesController',
                 template: require('./facilities.pug')(),
-                resolve: {}
+                resolve: {
+                    facilities: ['FacilitiesService', function(FacilitiesService){
+                        return FacilitiesService.getFacilities();
+                    }]
+                }
             });
         }]);
     };
